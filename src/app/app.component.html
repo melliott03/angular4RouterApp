@@ -1,3 +1,24 @@
-<h1>
+<!-- <h1>
   {{title}}
-</h1>
+</h1> -->
+
+<!-- <a routerLink="/member">Member</a>
+<a routerLink="/product">Product</a>
+<br> -->
+
+<div class="main">
+  <h1>Item's List</h1>
+  <div class="addItem">
+    <input [(ngModel)] = "newItem" placeholder="Add Item" class="addText" >
+    <button (click) = "pushItem()" > Add </button>
+  </div>
+  <ul>
+    <li *ngFor=" let i of items; let ind = index">{{i}}
+      <span (click) = "removeItem(ind)">x</span>
+    </li>
+  </ul>
+</div>
+
+
+
+<!-- <router-outlet></router-outlet> -->
